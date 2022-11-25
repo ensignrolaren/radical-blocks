@@ -8,6 +8,8 @@
  * Author URI:   https://kelseybarmettler.com/
  * Text Domain:  radical-pack
  * Requires PHP: 5.6.20
+ * GitHub Plugin URI: ensignrolaren/radical-blocks
+ * GitHub Plugin URI: https://github.com/ensignrolaren/radical-blocks
  */
 
 // Set new ACF Save and Load points
