@@ -1,0 +1,33 @@
+{
+	"name": "rad/timeline-event",
+	"title": "Timeline Event",
+	"description": "Event block for use within the Timeline block",
+	"category": "radical",
+	"icon": "carrot",
+	"apiVersion": 2,
+	"keywords": [
+		"timeline",
+		"event",
+		"time",
+		"chronological"
+	],
+	"acf": {
+		"mode": "edit",
+	"renderTemplate": "render.php"
+	},
+	"styles": [],
+	"supports": {
+		"align": false,
+		"anchor": true,
+		"alignContent": true,
+		"color": {
+			"text": true,
+			"background": true,
+			"link": false
+		},
+		"alignText": true,
+		"fullHeight": false
+	},
+	"attributes": {
+	}
+}

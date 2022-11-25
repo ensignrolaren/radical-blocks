@@ -1,0 +1,33 @@
+{
+	"name": "rad/testimonial",
+	"title": "Testimonial",
+	"description": "A testimonial with a body, image, and attribution",
+	"category": "radical",
+	"icon": "carrot",
+	"apiVersion": 2,
+	"keywords": [
+		"testimonial",
+		"media",
+		"text",
+		"review"
+	],
+	"acf": {
+		"mode": "edit",
+	"renderTemplate": "render.php"
+	},
+	"styles": [],
+	"supports": {
+		"align": false,
+		"anchor": true,
+		"alignContent": true,
+		"color": {
+			"text": true,
+			"background": true,
+			"link": false
+		},
+		"alignText": true,
+		"fullHeight": false
+	},
+	"attributes": {
+	}
+}

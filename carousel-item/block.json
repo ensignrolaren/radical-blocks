@@ -1,0 +1,34 @@
+{
+	"name": "rad/carousel-item",
+	"title": "Carousel Item",
+	"description": "Carousel item block for use within the Carousel block",
+	"category": "radical",
+	"icon": "carrot",
+	"apiVersion": 2,
+	"keywords": [
+		"carousel",
+		"slideshow",
+		"slide",
+		"slides"
+	],
+	"acf": {
+		"mode": "preview",
+	"renderTemplate": "render.php"
+	},
+	"styles": [],
+	"supports": {
+		"align": false,
+		"anchor": true,
+		"alignContent": true,
+		"color": {
+			"text": true,
+			"background": true,
+			"link": false
+		},
+		"alignText": true,
+		"fullHeight": false
+	},
+	"attributes": {
+	}
+	
+}

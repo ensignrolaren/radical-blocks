@@ -1,0 +1,33 @@
+{
+	"name": "rad/timeline",
+	"title": "Timeline",
+	"description": "A block to display events along a vertical timeline",
+	"category": "radical",
+	"icon": "carrot",
+	"apiVersion": 2,
+	"keywords": [
+		"timeline",
+		"media",
+		"text",
+		"review"
+	],
+	"acf": {
+		"mode": "edit",
+	"renderTemplate": "render.php"
+	},
+	"styles": [],
+	"supports": {
+		"align": true,
+		"anchor": true,
+		"alignContent": true,
+		"color": {
+			"text": true,
+			"background": true,
+			"link": false
+		},
+		"alignText": true,
+		"fullHeight": false
+	},
+	"attributes": {
+	}
+}

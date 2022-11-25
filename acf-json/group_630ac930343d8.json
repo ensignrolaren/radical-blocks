@@ -1,0 +1,47 @@
+{
+    "key": "group_630ac930343d8",
+    "title": "Theme Layout Options",
+    "fields": [
+        {
+            "key": "field_630aceaea9983",
+            "label": "Normal content width",
+            "name": "normal_content_width",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 400,
+            "max": 1600,
+            "placeholder": 800,
+            "step": 10,
+            "prepend": "",
+            "append": "px"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-theme-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1667593322
+}

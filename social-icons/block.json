@@ -1,0 +1,41 @@
+{
+	"name": "rad/social-icons",
+	"title": "Social Icons",
+	"description": "Social icons",
+	"style": "",
+	"script": "",
+	"category": "radical",
+	"icon": "carrot",
+	"apiVersion": 2,
+	"keywords": [
+		"social media",
+		"social",
+		"icons",
+		"facebook",
+		"instagram"
+	],
+	"acf": {
+		"mode": "preview",
+	"renderTemplate": "render.php"
+	},
+    "example": {
+        "attributes": {
+            "message": "This is a notice!"
+        }
+    },
+	"styles": [],
+	"supports": {
+		"align": true,
+		"anchor": true,
+		"alignContent": true,
+		"color": {
+			"text": true,
+			"background": true,
+			"link": true
+		},
+		"alignText": true,
+		"fullHeight": false
+	},
+	"attributes": {
+	}
+}

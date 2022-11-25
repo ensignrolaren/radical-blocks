@@ -1,0 +1,37 @@
+{
+	"name": "rad/carousel",
+	"title": "Carousel",
+	"description": "Carousel/slideshow block to cycle through content like images, text, or anything",
+	"category": "radical",
+	"icon": "carrot",
+	"style": "file:./carousel.css",
+	"editorStyle": "file:./carousel.css",
+	"editorScript": "carousel",
+	"script": "carousel",
+	"apiVersion": 2,
+	"keywords": [
+		"carousel",
+		"slideshow",
+		"slider",
+		"slides"
+	],
+	"acf": {
+		"mode": "preview",
+	"renderTemplate": "render.php"
+	},
+	"styles": [],
+	"supports": {
+		"align": true,
+		"anchor": true,
+		"alignContent": true,
+		"color": {
+			"text": true,
+			"background": true,
+			"link": false
+		},
+		"alignText": true,
+		"fullHeight": false
+	},
+	"attributes": {
+	}
+}

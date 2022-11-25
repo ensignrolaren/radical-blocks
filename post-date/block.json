@@ -1,0 +1,34 @@
+{
+	"name": "rad/post-date",
+	"title": "Post Date",
+	"description": "Post date",
+	"category": "radical",
+	"icon": "carrot",
+	"style": "",
+	"apiVersion": 2,
+	"keywords": [
+		"post date",
+		"blog",
+		"single",
+		"header"
+	],
+	"acf": {
+		"mode": "edit",
+	"renderTemplate": "render.php"
+	},
+	"styles": [],
+	"supports": {
+		"align": false,
+		"anchor": true,
+		"alignContent": true,
+		"color": {
+			"text": true,
+			"background": true,
+			"link": false
+		},
+		"alignText": true,
+		"fullHeight": false
+	},
+	"attributes": {
+	}
+}

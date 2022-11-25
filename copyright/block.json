@@ -1,0 +1,34 @@
+{
+	"name": "rad/copyright",
+	"title": "copyright",
+	"description": "Copyright [current year] plus the site name",
+	"style": "",
+	"script": "",
+	"category": "radical",
+	"icon": "carrot",
+	"apiVersion": 2,
+	"keywords": [
+		"copyright",
+		"media",
+		"text"
+	],
+	"acf": {
+		"mode": "edit",
+	"renderTemplate": "render.php"
+	},
+	"styles": [],
+	"supports": {
+		"align": true,
+		"anchor": true,
+		"alignContent": true,
+		"color": {
+			"text": true,
+			"background": true,
+			"link": false
+		},
+		"alignText": true,
+		"fullHeight": false
+	},
+	"attributes": {
+	}
+}
