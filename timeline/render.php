@@ -26,9 +26,9 @@ if ( ! empty( $block['textColor'] ) ) {
 	$classes[] = 'has-' . $block['textColor'] . '-color';
 }
 printf(
-	'<div class="%s"%s>',
+	'<ul class="%s"%s>',
 	esc_attr(join(' ', $classes)),
 	!empty($block['anchor']) ? ' id="' . esc_attr(sanitize_title($block['anchor'])) . '"' : '',
 ); ?>
 	<InnerBlocks />
-</div>
+</ul>

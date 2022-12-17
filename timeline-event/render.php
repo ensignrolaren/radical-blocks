@@ -8,7 +8,7 @@
  * @param   bool $is_preview True during AJAX preview.
  * @param   (int|string) $post_id The post ID this block is saved to.
  */ ?>
-<div class="rad-timeline__event">
+<li class="rad-timeline__event">
 	<?php
 	// Create class attribute allowing for custom "className" and "align" values.
 	$classes = ['rad-timeline__event-inner'];
@@ -32,8 +32,8 @@
 		!empty($block['anchor']) ? ' id="' . esc_attr(sanitize_title($block['anchor'])) . '"' : '',
 	); ?>
 		<InnerBlocks />
-	</div>
+	</li>
 	<div class="rad-timeline__event-spacer">
 		<!-- spacer -->
 	</div>
-</div>
+</li>
