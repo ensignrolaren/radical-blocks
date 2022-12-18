@@ -3,7 +3,7 @@
 /**
  * Plugin Name:  Radical Blocks
  * Description:  A collection of custom blocks
- * Version:      1.0.3
+ * Version:      1.0.4
  * Author:       Kelsey Barmettler
  * Author URI:   https://kelseybarmettler.com/
  * Text Domain:  radical-pack
