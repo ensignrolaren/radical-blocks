@@ -1,0 +1,36 @@
+{
+	"name": "rad/featured-products",
+	"title": "Featured Products",
+	"description": "Featured products",
+	"category": "radical",
+	"icon": "carrot",
+	"style": "file:./featured-products.css",
+	"editorStyle": "file:./featured-products.css",
+	"editorScript": "all-products",
+	"script": "featured-products",
+	"apiVersion": 2,
+	"keywords": [
+		"featured products",
+		"products",
+		"woocommerce"
+	],
+	"acf": {
+		"mode": "preview",
+	"renderTemplate": "render.php"
+	},
+	"styles": [],
+	"supports": {
+		"align": true,
+		"anchor": true,
+		"alignContent": true,
+		"color": {
+			"text": true,
+			"background": true,
+			"link": false
+		},
+		"alignText": true,
+		"fullHeight": false
+	},
+	"attributes": {
+	}
+}

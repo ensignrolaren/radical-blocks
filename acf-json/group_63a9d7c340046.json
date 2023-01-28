@@ -1,0 +1,46 @@
+{
+    "key": "group_63a9d7c340046",
+    "title": "Block: Post Preview",
+    "fields": [
+        {
+            "key": "field_63a9d7c35bb1b",
+            "label": "Post Preview",
+            "name": "post_preview",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "The post preview is displayed on archive pages, and at the top of individual blog posts.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1672075383
+}

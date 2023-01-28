@@ -1,0 +1,35 @@
+{
+	"name": "rad/row",
+	"title": "Row",
+	"description": "Arrange blocks in a row",
+	"category": "radical",
+	"icon": "carrot",
+	"style": "file:./row.css",
+	"editorStyle": "file:./row.css",
+	"editorScript": "carousel",
+	"apiVersion": 2,
+	"keywords": [
+		"row",
+		"columns",
+		"group"
+	],
+	"acf": {
+		"mode": "preview",
+	"renderTemplate": "render.php"
+	},
+	"styles": [],
+	"supports": {
+		"align": true,
+		"anchor": true,
+		"alignContent": true,
+		"color": {
+			"text": true,
+			"background": true,
+			"link": false
+		},
+		"alignText": true,
+		"fullHeight": false
+	},
+	"attributes": {
+	}
+}

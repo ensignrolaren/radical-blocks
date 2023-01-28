@@ -1,0 +1,4 @@
+.all-products-block .product {
+	background-color: red;
+	pointer-events: none;
+}

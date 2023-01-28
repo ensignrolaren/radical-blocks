@@ -1,0 +1,36 @@
+{
+	"name": "rad/all-products",
+	"title": "All Products",
+	"description": "All products",
+	"category": "radical",
+	"icon": "carrot",
+	"style": "file:./all-products.css",
+	"editorStyle": "file:./all-products.css",
+	"editorScript": "all-products",
+	"script": "all products",
+	"apiVersion": 2,
+	"keywords": [
+		"all-products",
+		"products",
+		"featured"
+	],
+	"acf": {
+		"mode": "preview",
+	"renderTemplate": "render.php"
+	},
+	"styles": [],
+	"supports": {
+		"align": true,
+		"anchor": true,
+		"alignContent": true,
+		"color": {
+			"text": true,
+			"background": true,
+			"link": false
+		},
+		"alignText": true,
+		"fullHeight": false
+	},
+	"attributes": {
+	}
+}

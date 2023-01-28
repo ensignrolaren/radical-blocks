@@ -3,7 +3,7 @@
 /**
  * Plugin Name:  Radical Blocks
  * Description:  A collection of custom blocks
- * Version:      1.0.4
+ * Version:      1.0.5
  * Author:       Kelsey Barmettler
  * Author URI:   https://kelseybarmettler.com/
  * Text Domain:  radical-pack
@@ -47,8 +47,19 @@ function radical_load_blocks() {
 	register_block_type(plugin_dir_path(__FILE__) . '/carousel/block.json');
 	// Carousel Item
 	register_block_type(plugin_dir_path(__FILE__) . 'carousel-item/block.json');
+	// Row
+	register_block_type(plugin_dir_path(__FILE__) . 'row/block.json');
 }
 add_action('init', 'radical_load_blocks');
+
+// check if Woocommerce is active
+$all_plugins = apply_filters('active_plugins', get_option('active_plugins'));
+if (stripos(implode($all_plugins), 'woocommerce.php')) {
+	// Woo featured products
+	register_block_type(plugin_dir_path(__FILE__) . 'featured-products/block.json');
+	// Woo all products
+	register_block_type(plugin_dir_path(__FILE__) . 'all-products/block.json');
+}
 
 // Conditionally load block assets only if they're present
 // function rad_register_block_script() {
