@@ -65,13 +65,19 @@ if (!empty($block['textColor'])) {
 
 </div>
 <style type="text/css">
+	.wp-block-rad-social-icons {
+		background-color: none;
+	}
+
 	.rad-social-icons {
 		display: flex;
 		flex-wrap: wrap;
 		column-gap: .5rem;
 		row-gap: .5rem;
 	}
-
+	.has-text-align-center.rad-social-icons {
+		justify-content: center;
+	}
 	/* we don't need the external link symbol for these */
 	.rad-social-icons a[target="_blank"]:after {
 		background: none;
@@ -85,7 +91,7 @@ if (!empty($block['textColor'])) {
 		padding: 1rem;
 	}
 
-	.rad-social-icon-wrapper {
+	.rad-social-icon-wrapper.has-background {
 		padding: .5rem;
 	}
 
