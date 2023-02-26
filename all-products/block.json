@@ -4,8 +4,6 @@
 	"description": "All products",
 	"category": "radical",
 	"icon": "carrot",
-	"style": "file:./all-products.css",
-	"editorStyle": "file:./all-products.css",
 	"editorScript": "all-products",
 	"script": "all products",
 	"apiVersion": 2,

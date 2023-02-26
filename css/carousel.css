@@ -5,8 +5,7 @@
 	display: none;
 }
 .rad-carousel__item:first-of-type {
-	display: block;
-	/* fixes CLS issue */
+	display: block; /* fixes CLS issue */
 }
 
 .slick-initialized .rad-carousel__item  {

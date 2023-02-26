@@ -89,6 +89,7 @@ else :
 	$adaptiveheight = 'false';
 endif;
 ?>
+
 <div class="rad-carousel <?php echo esc_attr($classes); ?>">
 	<!-- carousel -->
 	<InnerBlocks class="rad-carousel__inner" />

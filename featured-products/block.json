@@ -4,8 +4,6 @@
 	"description": "Featured products",
 	"category": "radical",
 	"icon": "carrot",
-	"style": "file:./featured-products.css",
-	"editorStyle": "file:./featured-products.css",
 	"editorScript": "all-products",
 	"script": "featured-products",
 	"apiVersion": 2,

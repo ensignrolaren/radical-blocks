@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Plugin Name:  Radical Blocks
+ * Plugin Name:  Custom ACF Blocks
  * Description:  A collection of custom blocks
- * Version:      1.0.5
+ * Version:      1.0.6
  * Author:       Kelsey Barmettler
  * Author URI:   https://kelseybarmettler.com/
  * Text Domain:  radical-pack
@@ -44,7 +44,7 @@ function radical_load_blocks() {
 	// Timeline Event
 	register_block_type(plugin_dir_path(__FILE__) . 'timeline-event/block.json');
 	// Carousel
-	register_block_type(plugin_dir_path(__FILE__) . '/carousel/block.json');
+	register_block_type(plugin_dir_path(__FILE__) . 'carousel/block.json');
 	// Carousel Item
 	register_block_type(plugin_dir_path(__FILE__) . 'carousel-item/block.json');
 	// Row
@@ -61,21 +61,51 @@ if (stripos(implode($all_plugins), 'woocommerce.php')) {
 	register_block_type(plugin_dir_path(__FILE__) . 'all-products/block.json');
 }
 
-// Conditionally load block assets only if they're present
-// function rad_register_block_script() {
-// 	// if we are not in the back end
-// 	// if (!is_admin()) {
-		// $id = get_the_ID();
-		// echo $id;
-		// // and also if there's not carousel
-		// if (!has_block('rad/carousel')) {
-		// 	wp_enqueue_script('carousel', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', ['jquery']);
-		// }
-// 	// }
-// }
-// add_action('init', 'rad_register_block_script');
+function smart_enqueue_block_assets() {
+	// Get all blocks on the page
+	$block_names = [];
+	$blocks = parse_blocks(get_post()->post_content);
+	$block_names = get_block_names_recursive($blocks);
 
-function rad_register_block_script() {
-	wp_register_script('carousel', plugin_dir_url(__FILE__) . 'carousel/slick.min.js', ['jquery']);
+	// Get all CSS and JS files in the 'css' and 'js' directories, respectively
+	$plugin_dir = plugin_dir_path(__FILE__);
+	$css_dir = $plugin_dir . 'css/';
+	$css_files = scandir($css_dir);
+	$js_dir = $plugin_dir . 'js/';
+	$js_files = scandir($js_dir);
+
+	// Check if jQuery is already enqueued
+	$jquery_enqueued = wp_script_is('jquery', 'enqueued');
+
+	// Loop through block names and enqueue assets
+	foreach ($block_names as $block_name) {
+		$css_filename = $block_name . '.css';
+		$js_filename = $block_name . '.js';
+		if (in_array($css_filename, $css_files)) {
+			wp_enqueue_style($block_name, plugins_url('css/' . $css_filename, __FILE__));
+		}
+		if (in_array($js_filename, $js_files)) {
+			$dependencies = array();
+			// Enqueue jQuery if it hasn't been enqueued already
+			if (!$jquery_enqueued && in_array($block_name, array('thethemefoundry/happyforms', 'carousel'))) {
+				wp_enqueue_script('jquery');
+				$jquery_enqueued = true;
+			}
+			wp_enqueue_script($block_name, plugins_url('js/' . $js_filename, __FILE__), $dependencies, false, true);
+		}
+	}
 }
-add_action('init', 'rad_register_block_script');
+
+// Recursive function to get all block names on the page, including nested blocks
+function get_block_names_recursive($blocks) {
+	$block_names = [];
+	foreach ($blocks as $block) {
+		$block_name = str_replace('rad/', '', $block['blockName']); // Remove 'rad/' from block names
+		$block_names[] = $block_name;
+		if (!empty($block['innerBlocks'])) {
+			$block_names = array_merge($block_names, get_block_names_recursive($block['innerBlocks']));
+		}
+	}
+	return $block_names;
+}
+add_action('wp_enqueue_scripts', 'smart_enqueue_block_assets');

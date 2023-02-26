@@ -10,15 +10,27 @@
  */
 
 // Create class attribute allowing for custom "className" and "align" values.
-$classes = '';
-if (!empty($block['className'])) {
-	$classes .= sprintf(' %s', $block['className']);
+// Create class attribute allowing for custom "className" and "align" values.
+$classes = [ 'rad-faq' ];
+if ( ! empty( $block['className'] ) ) {
+	$classes = array_merge( $classes, explode( ' ', $block['className'] ) );
 }
-if (!empty($block['align'])) {
-	$classes .= sprintf(' align%s', $block['align']);
+if ( ! empty( $block['align'] ) ) {
+	$classes[] = 'align' . $block['align'];
 }
-?>
-<div class="rad-faq <?php echo esc_attr($classes); ?>">
+if ( ! empty( $block['backgroundColor'] ) ) {
+	$classes[] = 'has-background';
+	$classes[] = 'has-' . $block['backgroundColor'] . '-background-color';
+}
+if ( ! empty( $block['textColor'] ) ) {
+	$classes[] = 'has-text-color';
+	$classes[] = 'has-' . $block['textColor'] . '-color';
+}
+printf(
+	'<div class="%s"%s>',
+	esc_attr(join(' ', $classes)),
+	!empty($block['anchor']) ? ' id="' . esc_attr(sanitize_title($block['anchor'])) . '"' : '',
+); ?>
 	<?php if (have_rows('faqs')) : ?>
 		<?php while (have_rows('faqs')) : the_row(); ?>
 			<?php if (have_rows('faq')) : ?>

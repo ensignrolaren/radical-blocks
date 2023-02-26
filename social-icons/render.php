@@ -31,7 +31,10 @@ if (!empty($block['textColor'])) {
 	$colors[] = 'has-' . $block['textColor'] . '-color';
 	$text_color = $block['textColor'];
 }
-
+if (empty($block['backgroundColor']) || empty($block['textColor'])) {
+	$colors[] = '';
+	$text_color = 'white';
+}
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php print join(' ', $classes); ?>">
 	<?php if (have_rows('social_icons')) : ?>

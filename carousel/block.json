@@ -4,10 +4,7 @@
 	"description": "Carousel/slideshow block to cycle through content like images, text, or anything",
 	"category": "radical",
 	"icon": "carrot",
-	"style": "file:./carousel.css",
 	"editorStyle": "file:./carousel.css",
-	"editorScript": "carousel",
-	"script": "carousel",
 	"apiVersion": 2,
 	"keywords": [
 		"carousel",
