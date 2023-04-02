@@ -10,7 +10,6 @@
  */
 
 // Create class attribute allowing for custom "className" and "align" values.
-// Create class attribute allowing for custom "className" and "align" values.
 $classes = [ 'rad-faq' ];
 if ( ! empty( $block['className'] ) ) {
 	$classes = array_merge( $classes, explode( ' ', $block['className'] ) );

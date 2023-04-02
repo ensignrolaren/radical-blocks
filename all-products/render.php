@@ -1,7 +1,7 @@
 <?php
 
 /**
- * All products Template for woo block
+ * All Products Template for woo block
  *
  * @param   array $block The block settings and attributes.
  * @param   string $content The block inner HTML (empty).
