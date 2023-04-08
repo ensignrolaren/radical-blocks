@@ -18,7 +18,7 @@
 	},
 	"styles": [],
 	"supports": {
-		"align": false,
+		"align": true,
 		"anchor": true,
 		"alignContent": true,
 		"color": {
