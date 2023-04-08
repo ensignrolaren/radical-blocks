@@ -3,7 +3,7 @@
 /**
  * Plugin Name:  Custom ACF Blocks
  * Description:  A collection of custom blocks
- * Version:      1.0.6
+ * Version:      1.0.7
  * Author:       Kelsey Barmettler
  * Author URI:   https://kelseybarmettler.com/
  * Text Domain:  radical-pack
