@@ -30,9 +30,7 @@ $post_id = get_the_ID() ? get_the_ID() : $_POST['post_id'];
 ?>
 <ul id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> woocommerce">
 	<?php
-		$text_color = 'has-'.get_field( 'moonwatch_text_color' ).'-color';
-		$background_color = 'has-'.get_field( 'moonwatch_background_color' ).'-background-color has-background';
-		$items_per_row = get_field( 'items_per_row' );
+		$columns = get_field( 'columns' );
 	?>
 	<?php if ( have_rows( 'featured_products' ) ) : ?>
 		<?php while ( have_rows( 'featured_products' ) ) : the_row(); ?>
@@ -56,6 +54,6 @@ $post_id = get_the_ID() ? get_the_ID() : $_POST['post_id'];
 </ul>
 <style type="text/css">
 	<?php echo '#' . $id; ?> .product {
-		flex: 1 1 calc(<?php echo $items_per_row; ?> - 1.5rem);
+		flex: 1 1 calc(<?php echo $columns; ?> - 1.5rem);
 	}
 </style>

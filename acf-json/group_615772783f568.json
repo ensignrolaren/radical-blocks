@@ -3,11 +3,11 @@
     "title": "Block: Featured Products",
     "fields": [
         {
-            "key": "field_61577289b7b64",
-            "label": "Featured Products",
-            "name": "featured_products",
+            "key": "field_6429a4914d4f8",
+            "label": "Filter Products",
+            "name": "filter_products",
             "aria-label": "",
-            "type": "repeater",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,10 +16,47 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
+            "relevanssi_exclude": 0,
+            "choices": {
+                "latest": "Latest",
+                "handpick": "Handpick"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_61577289b7b64",
+            "label": "Featured Products",
+            "name": "featured_products",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6429a4914d4f8",
+                        "operator": "==contains",
+                        "value": "hand"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "layout": "table",
+            "pagination": 0,
             "min": 0,
             "max": 0,
-            "layout": "table",
+            "collapsed": "",
             "button_label": "Add Row",
             "rows_per_page": 20,
             "sub_fields": [
@@ -50,11 +87,11 @@
             ]
         },
         {
-            "key": "field_6157ae16120c5",
-            "label": "Colors",
-            "name": "",
+            "key": "field_6429a8007ce26",
+            "label": "Number of Products",
+            "name": "number_of_products",
             "aria-label": "",
-            "type": "accordion",
+            "type": "number",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -63,76 +100,19 @@
                 "class": "",
                 "id": ""
             },
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
+            "relevanssi_exclude": 0,
+            "default_value": 4,
+            "min": 1,
+            "max": 36,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "key": "field_6157ad63120c2",
-            "label": "Text Color",
-            "name": "moonwatch_text_color",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": [],
-            "allow_null": 1,
-            "other_choice": 0,
-            "default_value": "",
-            "layout": "vertical",
-            "return_format": "value",
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_6157ad89120c3",
-            "label": "Background Color",
-            "name": "moonwatch_background_color",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": [],
-            "allow_null": 1,
-            "other_choice": 0,
-            "default_value": "",
-            "layout": "vertical",
-            "return_format": "value",
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_6157ae05120c4",
-            "label": "Layout",
-            "name": "",
-            "aria-label": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
-        },
-        {
-            "key": "field_6157ae24120c6",
-            "label": "Items per row",
-            "name": "items_per_row",
+            "key": "field_6429a93dbe983",
+            "label": "Product Details",
+            "name": "product_details",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -143,20 +123,46 @@
                 "class": "",
                 "id": ""
             },
+            "relevanssi_exclude": 0,
             "choices": {
-                "1": "100%",
-                "2": "50%",
-                "3": "33%",
-                "4": "25%",
-                "5": "20%"
+                "image": "Image",
+                "title": "Title",
+                "price": "Price",
+                "description": "Description",
+                "short_description": "Short Description",
+                "buy_button": "Buy Button"
             },
-            "default_value": false,
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
+            "default_value": [
+                "image"
+            ],
             "return_format": "value",
+            "multiple": 1,
+            "allow_null": 0,
+            "ui": 1,
             "ajax": 0,
             "placeholder": ""
+        },
+        {
+            "key": "field_6429a65b4d4f9",
+            "label": "Columns",
+            "name": "columns",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "default_value": 4,
+            "min": 1,
+            "max": 6,
+            "step": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -177,5 +183,5 @@
     "active": true,
     "description": "Woocommerce block to hand-pick products to feature",
     "show_in_rest": 0,
-    "modified": 1672627137
+    "modified": 1680461747
 }
