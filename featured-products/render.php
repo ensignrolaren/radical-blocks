@@ -49,7 +49,7 @@ $post_id = get_the_ID() ? get_the_ID() : $_POST['post_id'];
 	$products = wc_get_products($args);
 
 	// Set loop properties
-	$columns = 4;
+	$columns = get_field( 'columns' );
 	wc_set_loop_prop('columns', $columns);
 
 	// Start custom WC loop
