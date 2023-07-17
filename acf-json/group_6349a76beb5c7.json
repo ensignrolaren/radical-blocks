@@ -70,6 +70,7 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "relevanssi_exclude": 0,
                             "choices": {
                                 "facebook": "Facebook",
                                 "instagram": "Instagram",
@@ -78,7 +79,8 @@
                                 "yelp": "Yelp",
                                 "linkedin": "LinkedIn",
                                 "discord": "Discord",
-                                "youtube": "Youtube"
+                                "youtube": "Youtube",
+                                "email": "Email"
                             },
                             "default_value": false,
                             "return_format": "value",
@@ -132,5 +134,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1669053270
+    "modified": 1689624774
 }
