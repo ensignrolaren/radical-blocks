@@ -25,6 +25,15 @@ if (!empty($block['className'])) {
 if (!empty($block['align'])) {
 	$classes .= ' align' . $block['align'];
 }
+if (!empty($block['backgroundColor'])) {
+	$colors[] = 'has-background';
+	$colors[] = 'has-' . $block['backgroundColor'] . '-background-color';
+}
+if (!empty($block['textColor'])) {
+	$colors[] = 'has-text-color';
+	$colors[] = 'has-' . $block['textColor'] . '-color';
+	$text_color = $block['textColor'];
+}
 ?>
 <style type="text/css">
 
