@@ -1,6 +1,12 @@
+.editor-styles-wrapper .rad-block-category-display a {
+	pointer-events: none;
+}
 .rad-block-category-display {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1rem;
 	list-style-type: none;
+}
+.rad-block-category-display .category-display-name {
+	position: absolute;
 }

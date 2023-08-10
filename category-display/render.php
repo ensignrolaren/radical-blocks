@@ -27,9 +27,6 @@ if (!empty($block['align'])) {
 }
 ?>
 <style type="text/css">
-	.editor-styles-wrapper .rad-block-category-display a {
-		pointer-events: none;
-	}
 
 	<?php echo '#' . $id; ?>.has-1-columns .category-item {
 		flex: 0 1 calc(100% - 1rem);
@@ -66,7 +63,7 @@ endif; ?>
 		<?php foreach ($category as $term) : ?>
 			<li class="category-item">
 				<a href="<?php echo esc_url(get_term_link($term)); ?>">
-					<p><?php echo esc_html($term->name); ?></p>
+					<p class="category-display-name"><?php echo esc_html($term->name); ?></p>
 					<?php if (get_field('show_featured_image') == 1) { ?>
 
 						<?php $term_id = $term->term_id; ?>
