@@ -49,6 +49,8 @@ function radical_load_blocks() {
 	register_block_type(plugin_dir_path(__FILE__) . 'carousel-item/block.json');
 	// Row
 	register_block_type(plugin_dir_path(__FILE__) . 'row/block.json');
+	// Category Display
+	register_block_type(plugin_dir_path(__FILE__) . 'category-display/block.json');
 }
 add_action('init', 'radical_load_blocks');
 

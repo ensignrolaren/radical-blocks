@@ -1,0 +1,35 @@
+{
+	"name": "rad/category-display",
+	"title": "Category Display",
+	"description": "Display a list or grid of one or more categories",
+	"category": "radical",
+	"icon": "category",
+	"style": "file:./category-display.css",
+	"editorStyle": "file:./category-display.css",
+	"editorScript": "carousel",
+	"apiVersion": 2,
+	"keywords": [
+		"category",
+		"categories",
+		"taxonomy"
+	],
+	"acf": {
+		"mode": "preview",
+	"renderTemplate": "render.php"
+	},
+	"styles": [],
+	"supports": {
+		"align": true,
+		"anchor": true,
+		"alignContent": true,
+		"color": {
+			"text": true,
+			"background": true,
+			"link": false
+		},
+		"alignText": true,
+		"fullHeight": false
+	},
+	"attributes": {
+	}
+}
