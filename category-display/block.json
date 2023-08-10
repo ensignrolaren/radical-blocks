@@ -6,7 +6,6 @@
 	"icon": "category",
 	"style": "file:./category-display.css",
 	"editorStyle": "file:./category-display.css",
-	"editorScript": "carousel",
 	"apiVersion": 2,
 	"keywords": [
 		"category",
@@ -17,7 +16,10 @@
 		"mode": "preview",
 	"renderTemplate": "render.php"
 	},
-	"styles": [],
+	"styles": [
+		{ "name": "default", "label": "Default", "isDefault": true },
+        { "name": "overlay", "label": "Overlay" }
+	],
 	"supports": {
 		"align": true,
 		"anchor": true,
