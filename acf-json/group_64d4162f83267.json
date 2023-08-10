@@ -51,7 +51,7 @@
             "name": "show_featured_image",
             "aria-label": "",
             "type": "true_false",
-            "instructions": "",
+            "instructions": "The Airfoil base theme adds support for a category featured image. Toggle this to show or hide it.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -60,7 +60,7 @@
                 "id": ""
             },
             "relevanssi_exclude": 0,
-            "message": "The Airfoil base theme adds support for a category featured image. Toggle this to show or hide it.",
+            "message": "",
             "default_value": 0,
             "ui_on_text": "Show",
             "ui_off_text": "Hide",
@@ -126,5 +126,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691636570
+    "modified": 1691642705
 }
