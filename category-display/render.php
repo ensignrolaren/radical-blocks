@@ -26,8 +26,41 @@ if (!empty($block['align'])) {
 	$classes .= ' align' . $block['align'];
 }
 ?>
+<style type="text/css">
+	.editor-styles-wrapper .rad-block-category-display a {
+		pointer-events: none;
+	}
 
-<ul id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($classes); ?>">
+	<?php echo '#' . $id; ?>.has-1-columns .category-item {
+		flex: 0 1 calc(100% - 1rem);
+	}
+
+	<?php echo '#' . $id; ?>.has-2-columns .category-item {
+		flex: 0 1 calc(50% - 1rem);
+	}
+
+	<?php echo '#' . $id; ?>.has-3-columns .category-item {
+		flex: 0 1 calc(33.333% - 1rem);
+	}
+
+	<?php echo '#' . $id; ?>.has-4-columns .category-item {
+		flex: 0 1 calc(25% - 1rem);
+	}
+
+	<?php echo '#' . $id; ?>.has-5-columns .category-item {
+		flex: 0 1 calc(20% - 1rem);
+	}
+
+	<?php echo '#' . $id; ?>.has-6-columns .category-item {
+		flex: 0 1 calc(16.66666667% - 1rem);
+	}
+</style>
+<?php if (get_field('columns')) :
+	$columns = (get_field('columns'));
+else :
+	$columns = 1;
+endif; ?>
+<ul id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($classes); ?> has-<?php echo $columns; ?>-columns">
 	<?php $category = get_field('category'); ?>
 	<?php if ($category) : ?>
 		<?php foreach ($category as $term) : ?>
@@ -36,7 +69,7 @@ if (!empty($block['align'])) {
 					<p><?php echo esc_html($term->name); ?></p>
 					<?php if (get_field('show_featured_image') == 1) { ?>
 
-						<?php $term_id = $term->term_id;?>
+						<?php $term_id = $term->term_id; ?>
 						<?php $term_id_prefixed = 'category_' . $term_id; ?>
 
 						<?php $featured_image = get_field('featured_image', $term_id_prefixed); ?>
