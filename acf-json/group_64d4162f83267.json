@@ -67,6 +67,27 @@
             "ui": 1
         },
         {
+            "key": "field_64e038b4980df",
+            "label": "Open Links in New Tab",
+            "name": "open_links_in_new_tab",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "relevanssi_exclude": 0,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
             "key": "field_64d43ca03a8d1",
             "label": "Display Settings",
             "name": "",
@@ -126,5 +147,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1691642705
+    "modified": 1692416250
 }

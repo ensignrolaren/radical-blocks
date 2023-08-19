@@ -36,7 +36,6 @@ if (!empty($block['textColor'])) {
 }
 ?>
 <style type="text/css">
-
 	<?php echo '#' . $id; ?>.has-1-columns .category-item {
 		flex: 0 1 calc(100% - 1rem);
 	}
@@ -71,7 +70,7 @@ endif; ?>
 	<?php if ($category) : ?>
 		<?php foreach ($category as $term) : ?>
 			<li class="category-item">
-				<a href="<?php echo esc_url(get_term_link($term)); ?>">
+				<a href="<?php echo esc_url(get_term_link($term)); ?>" <?= get_field('open_links_in_new_tab') == 1 ? 'target="_blank" rel="noreferrer"' : ''; ?>>
 					<p class="category-display-name"><?php echo esc_html($term->name); ?></p>
 					<?php if (get_field('show_featured_image') == 1) { ?>
 
